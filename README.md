@@ -2,7 +2,7 @@
 
 ## Want to learn how to build this project?
 
-Check out the [blog post]().
+Check out the [blog post](http://mherman.org/blog/2016/09/25/node-passport-and-postgres/#.V-gocpMrJE4).
 
 ## Want to use this project?
 
