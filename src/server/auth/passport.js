@@ -1,5 +1,5 @@
 const passport = require('passport');
-const knex = require('../db/knex');
+const knex = require('../db/connection');
 
 module.exports = () => {
 
@@ -10,7 +10,7 @@ module.exports = () => {
   passport.deserializeUser((id, done) => {
     knex('users').where({id}).first()
     .then((user) => { done(null, user); })
-    .catch((err) => { done(err,null); });
+    .catch((err) => { done(err, null); });
   });
 
 };
