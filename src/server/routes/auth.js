@@ -6,10 +6,11 @@ const passport = require('../auth/local');
 
 router.post('/register', authHelpers.loginRedirect, (req, res, next)  => {
   return authHelpers.createUser(req, res)
-  .then((user) => {
-    handleLogin(res, user[0]);
+  .then((response) => {
+    passport.authenticate('local', (err, user, info) => {
+      if (user) { handleResponse(res, 200, 'success'); }
+    })(req, res, next);
   })
-  .then(() => { handleResponse(res, 200, 'success'); })
   .catch((err) => { handleResponse(res, 500, 'error'); });
 });
 
