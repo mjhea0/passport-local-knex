@@ -231,7 +231,7 @@ describe('routes : auth', () => {
     });
     it('should throw an error if a user is not logged in', (done) => {
       chai.request(server)
-      .get('/user')
+      .get('/admin')
       .end((err, res) => {
         should.exist(err);
         res.redirects.length.should.eql(0);
