@@ -1,7 +1,19 @@
 language:
-- node_js
+  - node_js
+
 node_js:
-- '6'
+  - '9'
+  - '8'
+  - '7'
+  - '6'
+
+services:
+  - postgresql
+
 env:
   global:
-  - NODE_ENV=test
+    - NODE_ENV=test
+    - SECRET_KEY=update
+
+before_script:
+  - psql -c 'create database passport_local_knex_test;' -U postgres

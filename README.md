@@ -1,8 +1,10 @@
 # Node, Passport, and Postgres
 
+[![Build Status](https://travis-ci.org/mjhea0/passport-local-knex.svg?branch=node-update)](https://travis-ci.org/mjhea0/passport-local-knex)
+
 ## Want to learn how to build this project?
 
-Check out the [blog post](http://mherman.org/blog/2016/09/25/node-passport-and-postgres/#.V-gocpMrJE4).
+Check out the [blog post](http://mherman.org/blog/2016/09/25/node-passport-and-postgres).
 
 ## Want to use this project?
 
